@@ -8,10 +8,7 @@ function($scope, $stateParams, posts){
     title: $scope.title,
     link: $scope.link,
     upvotes: 0,
-    comments: [
-      {author: 'Joe', body: 'Cool post!', upvotes: 0},
-      {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
-    ]
+    comments: []
   });
   $scope.addComment = function(){
     if($scope.body === '') { return; }
