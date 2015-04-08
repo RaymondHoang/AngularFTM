@@ -31,11 +31,14 @@ GEM
       railties (>= 3.1)
       sprockets
       tilt
+    angular_rails_csrf (1.0.3)
+      rails (>= 3, < 5)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     erubis (2.7.0)
     execjs (2.5.0)
     hike (1.2.3)
+    hirb (0.7.2)
     i18n (0.7.0)
     jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
@@ -106,6 +109,8 @@ PLATFORMS
 
 DEPENDENCIES
   angular-rails-templates
+  angular_rails_csrf
+  hirb
   jbuilder (~> 2.0)
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)
