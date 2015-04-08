@@ -1,7 +1,8 @@
 angular.module('flapperNews')
-.controller('PostsCtrl', [
-'$scope','posts','post',
-function($scope, posts, post){
+.service('post', function () { })
+.controller('PostsCtrl', ['$scope','posts','post', function($scope, posts, post){
+  $scope.posts = posts.posts;
+  $scope.post = post;
   $scope.posts.push({
     title: $scope.title,
     link: $scope.link,

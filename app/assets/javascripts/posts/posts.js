@@ -1,6 +1,5 @@
 angular.module('flapperNews')
-.factory('posts', ['$http', 
-function($http){
+.factory('posts', ['$http', function($http){
   var o = {
     posts: []
   };
@@ -29,11 +28,6 @@ function($http){
   };
   o.addComment = function(id, comment) {
   return $http.post('/posts/' + id + '/comments.json', comment);
-};
-  resolve: {
-  post: ['$stateParams', 'posts', function($stateParams, posts) {
-    return posts.get($stateParams.id);
-  }]
-}
+}; 
   return o;
 }])

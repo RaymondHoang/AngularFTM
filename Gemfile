@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
-gem 'hirb'
+gem 'devise'
+gem 'omniauth'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
