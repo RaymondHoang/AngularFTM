@@ -1,8 +1,6 @@
 angular.module('flapperNews')
 .controller('PostsCtrl', [
-'$scope',
-'posts',
-'post',
+'$scope','posts','post',
 function($scope, posts, post){
   $scope.posts.push({
     title: $scope.title,
@@ -23,9 +21,5 @@ function($scope, posts, post){
   $scope.incrementUpvotes = function(comment){
   posts.upvoteComment(post, comment);
 };
-  resolve: {
-  post: ['$stateParams', 'posts', function($stateParams, posts) {
-    return posts.get($stateParams.id);
-  }]
-}
+  
 }]);

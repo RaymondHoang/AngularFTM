@@ -7,7 +7,7 @@ function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      controller: 'HomeCtrl'
     })
     .state('posts', {
       url: '/posts/{id}',
@@ -15,4 +15,9 @@ function($stateProvider, $urlRouterProvider) {
       controller: 'PostsCtrl'
     })
   $urlRouterProvider.otherwise('home');
+    resolve: {
+    postPromise: ['posts', function(posts){
+      return posts.getAll();
+    }]
+  }
 }]);

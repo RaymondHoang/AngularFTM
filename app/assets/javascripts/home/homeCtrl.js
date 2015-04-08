@@ -1,5 +1,5 @@
 angular.module('flapperNews')
-.controller('MainCtrl', [
+.controller('HomeCtrl', [
 '$scope', 'posts',
 function($scope, posts){
   $scope.posts = posts.posts;
@@ -11,11 +11,11 @@ function($scope, posts){
   });
   $scope.title = '';
   $scope.link = '';
-};
+  };
 
   $scope.incrementUpvotes = function(post) {
   posts.upvote(post);
-};
+  };
   resolve: {
     postPromise: ['posts', function(posts){
       return posts.getAll();
