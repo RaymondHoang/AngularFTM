@@ -2,7 +2,12 @@ source 'https://rubygems.org'
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
 gem 'devise'
+gem 'therubyracer'
 gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-gplus'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
