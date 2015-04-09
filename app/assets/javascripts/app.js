@@ -11,8 +11,7 @@ function($stateProvider, $urlRouterProvider) {
       resolve: {
       postPromise: ['posts', function(posts){
         return posts.getAll();
-    }]
-  }
+    }]}
     })
     .state('posts', {
       url: '/posts/{id}',
@@ -40,6 +39,7 @@ function($stateProvider, $urlRouterProvider) {
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function (){
           $state.go('home');
+         
         })
       }]
     });

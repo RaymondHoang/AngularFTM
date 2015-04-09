@@ -49,6 +49,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     hashie (3.4.0)
     hike (1.2.3)
+    hirb (0.7.3)
     i18n (0.7.0)
     jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
@@ -159,6 +160,7 @@ DEPENDENCIES
   angular-rails-templates
   angular_rails_csrf
   devise
+  hirb
   jbuilder (~> 2.0)
   omniauth
   omniauth-facebook

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks", :sessions => "sessions"}
+  devise_for :users
   root 'application#angular'
     resources :posts, only: [:create, :index, :show] do
     resources :comments, only: [:show, :create] do
